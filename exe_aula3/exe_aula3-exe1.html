@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aula 3 - Exercício 1</h1>
+    <script>
+       
+const maxTentativas = 7;
+let min = 1;
+let max = 100;
+let tentativas = 0;
+
+
+while (tentativas < maxTentativas) {
+   
+    const palpite = Math.floor((min + max) / 2);
+    tentativas++;
+
+  
+    alert("O computador acha que você pensou no número: " + palpite);
+
+   
+    const resposta = prompt("O número é igual (I), maior (M) ou menor (L) que o palpite?").toUpperCase();
+
+    if (resposta === "I") {
+        alert("O computador acertou! O número era: " + palpite);
+        break;
+    } else if (resposta === "M") {
+        min = palpite + 1;
+    } else if (resposta === "L") {
+        max = palpite - 1;
+    } else {
+        alert("Resposta inválida. Por favor, digite 'I', 'M' ou 'L'.");
+    }
+}
+
+if (tentativas === maxTentativas) {
+    alert("Número máximo de tentativas alcançado. O número era: " + Math.floor((min + max) / 2));
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aula 3 - Exercício 5</h1>
+    <script>
+
+let numero = parseInt(prompt("Digite um número para calcular o fatorial:"));
+
+
+if (numero < 0 || isNaN(numero)) {
+    alert("Por favor, insira um número inteiro positivo.");
+} else {
+   
+    let fatorial = 1;
+
+   
+    for (let i = 1; i <= numero; i++) {
+        fatorial *= i;
+    }
+
+    alert("O fatorial de " + numero + " é: " + fatorial);
+}
+
+    </script>
+</body>
+</html>
