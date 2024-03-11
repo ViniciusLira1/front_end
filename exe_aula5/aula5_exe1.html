@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+</head>
+<body>
+    <h1>Aula 6 - Exercício 1</h1>
+  <script>
+    // Função para calcular o dobro de cada valor em um vetor de inteiros
+function calcularDobro(vetor) {
+    let resultado = [];
+    for (let i = 0; i < vetor.length; i++) {
+        resultado.push(vetor[i] * 2);
+    }
+    return resultado;
+}
+
+// Solicitar ao usuário para inserir 5 valores inteiros
+let valores = [];
+for (let i = 0; i < 5; i++) {
+    let valor = parseInt(prompt("Digite um valor inteiro:"));
+    if (!isNaN(valor)) {
+        valores.push(valor);
+    } else {
+        alert("Por favor, insira um valor inteiro válido.");
+        break;
+    }
+}
+
+// Verificar se foram inseridos 5 valores inteiros válidos
+if (valores.length === 5) {
+    // Chamar a função para calcular o dobro de cada valor e armazenar o resultado
+    let resultadoDobro = calcularDobro(valores);
+
+    // Exibir o resultado usando um alerta
+    alert("O dobro de cada valor é: " + resultadoDobro.join(', '));
+}
+
+  </script>
+</body>
+</html>
