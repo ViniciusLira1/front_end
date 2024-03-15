@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5</title>
+</head>
+<body>
+    <h1>Aula 5 - Exercício 3</h1>
+    <script>
+        let vetor = [];
+       let soma = 0;
+       let acimaMedia = 0
+       let abaixoMedia = 0
+       let w = 0
+        for (let i = 0; i <20; i++){
+            let num = (Math.floor(Math.random() * 103));
+            vetor[i] =num; 
+            
+        }
+        console.log(vetor)
+
+        for(let z = 0; z<vetor.length;z++){
+            soma +=vetor[z]
+            console.log(soma)
+        }
+        let media = soma/vetor.length;
+        console.log("A media das idades é:",media)
+        for(let x = 0; x<vetor.length; x++){
+            w = vetor[x]
+            if (w >= media){
+                acimaMedia +=1 
+                
+            }
+            else{
+                abaixoMedia +=1
+            }
+        }
+        console.log("Total de acima da media:",acimaMedia)
+        console.log("Total de abaixo da media:",abaixoMedia)
+    </script>
+</body>
+</html>
