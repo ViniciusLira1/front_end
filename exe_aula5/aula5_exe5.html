@@ -8,7 +8,35 @@
 <body>
     <h1>Aula 5 - Exercício 5</h1>
     <script>
-        
+        function lerNumeros() {
+    let numeros = [];
+    for (let i = 0; i < 8; i++) {
+        let num;
+        do {
+            num = parseInt(prompt(`Digite o ${i + 1}º número entre 100 e 200:`));
+            if (num >= 100 && num <= 200) {
+                numeros.push(num);
+                break;
+            } else {
+                alert("Valor inválido. Por favor, digite um número entre 100 e 200.");
+            }
+        } while (true);
+    }
+    return numeros;
+}
+
+function main() {
+    console.log("Digite 8 números entre 100 e 200:");
+    const numeros = lerNumeros();
+
+    console.log("\nValores armazenados:");
+    numeros.forEach(num => {
+        console.log(num);
+    });
+}
+
+main();
+
     </script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5</title>
+</head>
+<body>
+    <h1>Aula 5 - Exercício 7</h1>
+    <script>
+    function verificarNomeComTentativasLimitadas(nomes, novoNome) {
+    for (let tentativa = 1; tentativa <= 5; tentativa++) {
+        let indice = nomes.indexOf(novoNome);
+        if (indice !== -1) {
+            console.log(`O nome ${novoNome} foi encontrado no índice ${indice} na ${tentativa}ª tentativa.`);
+            return;
+        } else {
+            if (tentativa < 5) {
+                novoNome = prompt(`Nome não encontrado! Você tem mais ${5 - tentativa} tentativa(s). Digite outro nome:`);
+            }
+        }
+    }
+    console.log("Limite de tentativas atingido. Nome não encontrado.");
+}
+
+// Vetor de strings com 10 nomes
+const nomes = ["João", "Maria", "José", "Ana", "Pedro", "Mariana", "Lucas", "Carla", "Gustavo", "Laura"];
+
+// Ler um novo nome
+const novoNome = prompt("Digite um nome para verificar se está na lista:");
+
+// Verificar se o nome está armazenado no vetor com tentativas limitadas
+verificarNomeComTentativasLimitadas(nomes, novoNome);
+
+
+    </script>
+    
+</body>
+</html>
