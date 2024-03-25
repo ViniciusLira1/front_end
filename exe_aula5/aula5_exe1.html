@@ -8,7 +8,7 @@
 <body>
     <h1>Aula 5 - Exercício 1</h1>
   <script>
-    // Função para calcular o dobro de cada valor em um vetor de inteiros
+
 function calcularDobro(vetor) {
     let resultado = [];
     for (let i = 0; i < vetor.length; i++) {
@@ -17,7 +17,7 @@ function calcularDobro(vetor) {
     return resultado;
 }
 
-// Solicitar ao usuário para inserir 5 valores inteiros
+
 let valores = [];
 for (let i = 0; i < 5; i++) {
     let valor = parseInt(prompt("Digite um valor inteiro:"));
@@ -29,12 +29,12 @@ for (let i = 0; i < 5; i++) {
     }
 }
 
-// Verificar se foram inseridos 5 valores inteiros válidos
+
 if (valores.length === 5) {
-    // Chamar a função para calcular o dobro de cada valor e armazenar o resultado
+
     let resultadoDobro = calcularDobro(valores);
 
-    // Exibir o resultado usando um alerta
+
     alert("O dobro de cada valor é: " + resultadoDobro.join(', '));
 }
 

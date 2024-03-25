@@ -9,18 +9,18 @@
     <h1>Aula 4 - Exercício 3</h1>
    <script>
     function encontrarMaior() {
-    // Solicita ao usuário para inserir três números
+
     let numero1 = parseFloat(prompt("Digite o primeiro número:"));
     let numero2 = parseFloat(prompt("Digite o segundo número:"));
     let numero3 = parseFloat(prompt("Digite o terceiro número:"));
 
-    // Verifica se os valores inseridos são válidos
+   
     if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
         alert("Por favor, insira números válidos.");
         return;
     }
 
-    // Encontra o maior número entre os três
+
     let maior = numero1;
     if (numero2 > maior) {
         maior = numero2;
@@ -29,11 +29,11 @@
         maior = numero3;
     }
 
-    // Exibe o maior número encontrado em um alerta
+
     alert("O maior número é: " + maior);
 }
 
-// Chama a função para encontrar o maior número
+
 encontrarMaior();
 
 </script>

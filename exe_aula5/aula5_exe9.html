@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5</title>
+</head>
+<body>
+    <h1>Aula 5 - Exercício 9</h1>
+    <script>
+        
+function lerNumeros(tamanho) {
+    let vetor = [];
+    for (let i = 0; i < tamanho; i++) {
+        let numero = parseInt(prompt(`Digite o ${i + 1}º número:`));
+        vetor.push(numero);
+    }
+    return vetor;
+}
+
+
+function intercalarVetores(vetorA, vetorB) {
+    let vetorC = [];
+    for (let i = 0; i < vetorA.length; i++) {
+        vetorC.push(vetorA[i]);
+        vetorC.push(vetorB[i]);
+    }
+    return vetorC;
+}
+
+
+let vetorA = lerNumeros(5);
+
+
+let vetorB = lerNumeros(5);
+
+let vetorC = intercalarVetores(vetorA, vetorB);
+
+console.log("Vetor C:", vetorC);
+
+    </script>
+</body>
+</html>

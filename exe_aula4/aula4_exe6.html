@@ -31,7 +31,7 @@
 
 <script>
 function verificarStatus() {
-    // Coletar as notas e os pesos
+
     let nota1 = parseFloat(document.getElementById('nota1').value);
     let peso1 = parseFloat(document.getElementById('peso1').value);
     let nota2 = parseFloat(document.getElementById('nota2').value);
@@ -39,17 +39,16 @@ function verificarStatus() {
     let nota3 = parseFloat(document.getElementById('nota3').value);
     let peso3 = parseFloat(document.getElementById('peso3').value);
 
-    // Calcular a média ponderada
+  
     let mediaPonderada = ((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3)) / (peso1 + peso2 + peso3);
 
-    // Verificar o status do aluno
     let status;
     if (mediaPonderada >= 9) {
         status = "Aprovado com excelência";
     } else if (mediaPonderada >= 6) {
         status = "Aprovado";
     } else {
-        // Caso reprovado, permitir inserir a 4ª nota com peso de 40%
+ 
         let quartaNota = parseFloat(prompt("Você foi reprovado. Insira a quarta nota:"));
         let pesoQuartaNota = 0.4;
         mediaPonderada = ((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3) + (quartaNota * pesoQuartaNota)) / (peso1 + peso2 + peso3 + pesoQuartaNota);
@@ -60,7 +59,7 @@ function verificarStatus() {
         }
     }
 
-    // Exibir o status do aluno
+
     alert("Seu status no curso é: " + status);
 }
 </script>
